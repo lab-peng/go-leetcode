@@ -334,9 +334,14 @@ func isValid(s string) bool {
     return len(stack) == 0
 }
 
-// 153. Find Minimum in Rotated Sorted Array
+// 🚀 153. Find Minimum in Rotated Sorted Array
 func findMin(nums []int) int {
     l, r := 0, len(nums) - 1
+
+    // if nums[l] < nums[r] {
+    //     return nums[l]
+    // }
+
     for l < r {
         m := (l + r) / 2
         // if nums[m] < nums[r] then it would be find max 
@@ -349,8 +354,7 @@ func findMin(nums []int) int {
     return nums[l]
 }
 
-// 33. Search in Rotated Sorted Array
-
+// 🚀 33. Search in Rotated Sorted Array
 func search(nums []int, target int) int {
     l, r := 0, len(nums) - 1
     for l <= r {
